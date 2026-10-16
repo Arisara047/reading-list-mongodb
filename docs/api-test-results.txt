@@ -1,0 +1,68 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> reading-list@2.0.0 test
+> node --test tests/api.test.js
+
+GET /api/health 200
+▶ Reading List REST API backed by a real isolated MongoDB process
+  ✔ GET health confirms database connection (49.650684ms)
+GET /api/books 200
+  ✔ GET collection is initially empty (16.767017ms)
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+  ✔ POST rejects missing, blank, non-string and unknown fields (49.821332ms)
+POST /api/books 201
+  ✔ POST returns 201 and persists Thai text in MongoDB (18.28492ms)
+GET /api/books/6ad1d993e1724c1644b0a936 200
+  ✔ GET by ID preserves API id and timestamps (11.360581ms)
+PATCH /api/books/6ad1d993e1724c1644b0a936 200
+  ✔ PATCH changes only submitted fields in MongoDB (16.789496ms)
+GET /api/books?status=finished 200
+GET /api/books?status=reading 200
+GET /api/books?status=wrong 400
+GET /api/books?status=reading&status=finished 400
+  ✔ GET query status filter includes and excludes records (25.95805ms)
+PATCH /api/books/6ad1d993e1724c1644b0a936 400
+PATCH /api/books/6ad1d993e1724c1644b0a936 400
+PATCH /api/books/6ad1d993e1724c1644b0a936 400
+PATCH /api/books/6ad1d993e1724c1644b0a936 400
+PATCH /api/books/6ad1d993e1724c1644b0a936 400
+PATCH /api/books/6ad1d993e1724c1644b0a936 400
+PATCH /api/books/6ad1d993e1724c1644b0a936 400
+  ✔ PATCH validates type, length and forbidden update operators (47.643106ms)
+GET /api/books/missing 404
+PATCH /api/books/missing 404
+DELETE /api/books/missing 404
+GET /api/books/000000000000000000000000 404
+PATCH /api/books/000000000000000000000000 404
+DELETE /api/books/000000000000000000000000 404
+  ✔ GET, PATCH and DELETE return 404 for missing or malformed IDs (18.854763ms)
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+  ✔ Malformed JSON and non-object JSON return 400 (13.819977ms)
+POST /api/books 413
+GET /api/missing 404
+  ✔ Oversized request returns 413 and unknown API returns 404 (6.748706ms)
+GET /api/books/6ad1d993e1724c1644b0a936 200
+  ✔ Existing data survives application and DB connection restart (34.415795ms)
+DELETE /api/books/6ad1d993e1724c1644b0a936 204
+GET /api/books/6ad1d993e1724c1644b0a936 404
+  ✔ DELETE returns empty 204 and removes the MongoDB document (19.771471ms)
+GET /api/health 503
+GET /api/books 503
+  ✔ Database disconnect returns 503 with JSON errors (7.930038ms)
+✔ Reading List REST API backed by a real isolated MongoDB process (1417.550806ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2068.503898

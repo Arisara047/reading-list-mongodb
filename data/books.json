@@ -1,0 +1,30 @@
+[
+  {
+    "id": "b1",
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "status": "reading",
+    "notes": "Read a chapter before bed."
+  },
+  {
+    "id": "b2",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "status": "want-to-read",
+    "notes": "A classic for the next quiet weekend."
+  },
+  {
+    "id": "b3",
+    "title": "A Room of One’s Own",
+    "author": "Virginia Woolf",
+    "status": "finished",
+    "notes": "A thoughtful read."
+  },
+  {
+    "id": "b4",
+    "title": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "status": "want-to-read",
+    "notes": "Recommended by a friend."
+  }
+]

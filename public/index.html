@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="th">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ชั้นหนังสือของฉัน | บันทึกการอ่าน</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<header><a class="brand" href="/">▤ <span>มุมหนังสือ</span></a><span class="header-note">พื้นที่เล็ก ๆ สำหรับคนรักการอ่าน</span></header>
+<main>
+<section class="hero"><div><p class="eyebrow">เริ่มต้นเรื่องราวใหม่ ทีละเล่ม</p><h1>เก็บหนังสือเล่มโปรด<br>ไว้ในมุมของคุณ</h1><p class="intro">รวมหนังสือที่อยากอ่าน ติดตามเล่มที่กำลังอ่าน<br>และบันทึกเรื่องราวจากเล่มที่อ่านจบแล้ว</p></div><div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="spine s1">เรื่องเล่า</div><div class="spine s2">อ่านอีกสักบท</div><div class="spine s3">จินตนาการ</div><span class="art-caption">ให้หนังสือดี ๆ มีพื้นที่ในทุกวัน</span></div></section>
+<section class="workspace"><aside class="panel"><p class="eyebrow">เติมเรื่องราวบนชั้นของคุณ</p><h2 id="form-title">เพิ่มหนังสือ</h2><p class="muted" id="form-hint">วันนี้มีเล่มไหนที่อยากอ่านบ้าง?</p>
+<form id="book-form"><label for="title">ชื่อหนังสือ <span>*</span></label><input id="title" name="title" required maxlength="120" placeholder="เช่น เจ้าชายน้อย">
+<label for="author">ผู้แต่ง <span>*</span></label><input id="author" name="author" required maxlength="80" placeholder="ชื่อผู้แต่งหนังสือ">
+<label for="status">สถานะการอ่าน</label><select id="status" name="status"><option value="want-to-read">อยากอ่าน</option><option value="reading">กำลังอ่าน</option><option value="finished">อ่านจบแล้ว</option></select>
+<label for="notes">บันทึกย่อ <small>ไม่จำเป็นต้องกรอก</small></label><textarea id="notes" name="notes" maxlength="1000" rows="3" placeholder="เหตุผลที่อยากอ่าน หรือสิ่งที่ชอบในหนังสือ…"></textarea>
+<button class="primary" id="save" type="submit">+ เพิ่มลงชั้นหนังสือ</button><button id="cancel" class="secondary" type="button" hidden>ยกเลิกการแก้ไข</button><p class="muted required">* จำเป็นต้องกรอก</p></form></aside>
+<section class="collection"><div class="section-head"><div><p class="eyebrow">คอลเลกชันของคุณ</p><h2>ชั้นหนังสือของฉัน <span id="count">0</span></h2></div><label class="filter-label" for="filter">แสดง<select id="filter"><option value="">หนังสือทั้งหมด</option><option value="want-to-read">อยากอ่าน</option><option value="reading">กำลังอ่าน</option><option value="finished">อ่านจบแล้ว</option></select></label></div>
+<p id="message" role="status" aria-live="polite"></p><div id="books" class="books" aria-busy="true"></div><button id="retry" class="secondary" hidden>ลองอีกครั้ง</button>
+<div class="shelf-note">หนังสือแต่ละเล่ม พาเราไปรู้จักโลกอีกใบ</div></section></section>
+<footer>มุมหนังสือ <span>บันทึกการอ่าน และเรื่องราวที่คุณอยากเก็บไว้</span></footer></main>
+<dialog id="details"><button id="close-details" class="secondary close">ปิด</button><p class="eyebrow">รายละเอียดหนังสือ</p><h2 id="detail-title"></h2><p id="detail-author"></p><p id="detail-status"></p><p id="detail-notes"></p></dialog>
+<dialog id="delete-dialog"><h2>ต้องการลบหนังสือเล่มนี้หรือไม่?</h2><p id="delete-name"></p><p>หนังสือเล่มนี้จะถูกลบออกจากชั้นหนังสือของคุณ</p><div class="dialog-actions"><button id="keep" class="secondary">เก็บไว้ก่อน</button><button id="confirm-delete" class="danger">ยืนยันลบหนังสือ</button></div></dialog>
+</body></html>

@@ -1,0 +1,32 @@
+{
+  "name": "reading-list",
+  "version": "2.0.0",
+  "description": "Thai Reading List with Express REST API and MongoDB",
+  "main": "server/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "node --watch server/index.js",
+    "start": "node server/index.js",
+    "seed": "node scripts/seed.js",
+    "import:json": "node scripts/import-json.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.2.1",
+    "mongoose": "^9.11.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "mongodb-memory-server-core": "^10.4.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "success": {
+    "code": 0,
+    "output": "MongoDB connected successfully\nReading List: http://localhost:3109\nGET /api/health 200\n"
+  },
+  "failure": {
+    "code": 1,
+    "output": "MongoDB connection failed. Check that MongoDB Server is running and MONGODB_URI is correct.\n"
+  }
+}

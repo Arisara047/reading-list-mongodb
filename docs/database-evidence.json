@@ -1,0 +1,18 @@
+{
+  "capturedAt": "2026-10-16T08:02:30.659Z",
+  "mongodbVersion": "7.0.24",
+  "database": "reading_list_demo",
+  "collection": "books",
+  "count": 4,
+  "document": {
+    "_id": "6ad1da15b559d85fed62e755",
+    "title": "บันทึกการอ่านบน MongoDB",
+    "author": "นักศึกษาทดลอง",
+    "status": "finished",
+    "notes": "บันทึกจากฟอร์มภาษาไทยและตรวจสอบในฐานข้อมูลจริง",
+    "createdAt": "2026-10-16T08:02:29.768Z",
+    "updatedAt": "2026-10-16T08:02:30.168Z",
+    "__v": 0
+  },
+  "source": "Actual MongoDB collection.findOne() result queried after frontend POST and PATCH; not a Compass screenshot."
+}
